@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAP Concur Audit Readiness for Australian CFOs — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <p style="font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px;">Governance for Audit Readiness</p>
+        <h1>SAP Concur Audit Readiness for Australian CFOs</h1>
+        <p>Be ready when ATO, external auditors, or the Board ask questions — without last-minute spreadsheets or governance firefighting.</p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="content-block-inner">
+        <h2>Why audits become stressful — even when systems are live</h2>
+        <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.7;">Governance issues don't appear in dashboards. They surface when pressure hits:</p>
+        <ul>
+          <li>ATO requests transaction-level evidence</li>
+          <li>Auditors ask why an expense passed policy</li>
+          <li>The Board challenges approval authority</li>
+          <li>Finance can't clearly explain past decisions</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">Your system may be live — but audit pressure reveals whether governance still holds.</p>
+
+        <div class="divider"></div>
+
+        <h2>What "audit-ready" actually means</h2>
+        <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.7;">Audit readiness is not about having data. It's about whether decisions are enforced, recorded, and explainable.</p>
+        <p style="margin-bottom: 12px; font-weight: 500; color: var(--text);">An audit-ready SAP Concur environment ensures:</p>
+        <ul>
+          <li>Policy rules applied before reimbursement</li>
+          <li>Approval authority aligned to formal delegation</li>
+          <li>Exceptions visible, traceable, and defensible</li>
+          <li>Evidence available without manual reconstruction</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">Governance is designed into daily workflows — not rebuilt during audits.</p>
+
+        <div class="divider"></div>
+
+        <h2>What CFOs actually see</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">CFOs gain visibility into:</p>
+        <ul>
+          <li>Policy exception trends</li>
+          <li>Approval overrides by role</li>
+          <li>Transaction-level audit trails</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">Every control is visible in reports ready for audit or Board review.</p>
+
+        <div class="divider"></div>
+
+        <h2>Who this is for</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">Designed for finance teams that:</p>
+        <ul>
+          <li>Have been live on SAP Concur for 6+ months</li>
+          <li>Are preparing for audit, Board review, or regulatory scrutiny</li>
+          <li>Want stronger governance without re-implementation</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div style="padding: 32px; background: var(--bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--border-soft);">
+          <h2 style="margin-top: 0;">Entry Offer</h2>
+          <h3 style="font-size: 20px; font-weight: 600; margin: 0 0 16px; color: var(--text);">Audit Readiness Governance Snapshot</h3>
+          <p style="margin-bottom: 12px; font-weight: 500; color: var(--text);">A focused two-week review delivering:</p>
+          <ul>
+            <li>A board-ready audit exposure map</li>
+            <li>Risks prioritised by audit impact</li>
+            <li>Clear recommendations: govern, optimise, or leave as-is</li>
+          </ul>
+          <p style="margin-top: 24px; margin-bottom: 0;">
+            <a href="contact.html" class="btn-primary">Book an Audit Readiness Snapshot</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

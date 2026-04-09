@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  
+  <style>
+    /* Thank You Page Specific Styles */
+    .thank-you-section {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .thank-you-content {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Success Icon */
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 32px;
+      animation: scaleIn 0.5s ease-out 0.2s both;
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .success-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Headline & Message */
+    .thank-you-content h1 {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1a1d21;
+      margin: 0 0 20px;
+    }
+
+    .thank-you-message {
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .thank-you-message p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #5c6573;
+      margin: 0 0 16px;
+    }
+
+    .thank-you-message p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 3-Step Process */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 56px 0;
+      animation: fadeIn 0.6s ease-out 0.4s both;
+    }
+
+    @media (max-width: 768px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .process-step {
+      background: #f6f8fa;
+      border: 1px solid #e4e8ec;
+      border-radius: 8px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .process-step:hover {
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: #0070d2;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0 auto 20px;
+    }
+
+    .step-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1d21;
+      margin: 0 0 12px;
+    }
+
+    .step-description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #5c6573;
+      margin: 0;
+    }
+
+    /* CTA Buttons */
+    .thank-you-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0 32px;
+    }
+
+    .btn-primary-large {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 32px;
+      background: #0070d2;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+      min-width: 280px;
+    }
+
+    .btn-primary-large:hover {
+      background: #005a9e;
+    }
+
+    .btn-secondary-large {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 32px;
+      background: transparent;
+      color: #0070d2;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      border: 2px solid #0070d2;
+      cursor: pointer;
+      transition: all 0.2s;
+      min-width: 280px;
+    }
+
+    .btn-secondary-large:hover {
+      background: #0070d2;
+      color: #fff;
+    }
+
+    .text-link {
+      font-size: 15px;
+      color: #0070d2;
+      text-decoration: none;
+      font-weight: 500;
+      transition: text-decoration 0.2s;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Trust Element */
+    .trust-line {
+      max-width: 640px;
+      margin: 48px auto 0;
+      padding-top: 32px;
+      border-top: 1px solid #e4e8ec;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #8b929d;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .thank-you-section {
+        padding: 48px 24px;
+      }
+
+      .success-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 24px;
+      }
+
+      .thank-you-content h1 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      .thank-you-message {
+        margin-bottom: 40px;
+      }
+
+      .thank-you-message p {
+        font-size: 16px;
+      }
+
+      .process-steps {
+        margin: 40px 0;
+      }
+
+      .process-step {
+        padding: 24px 20px;
+      }
+
+      .btn-primary-large,
+      .btn-secondary-large {
+        width: 100%;
+        min-width: auto;
+      }
+
+      .trust-line {
+        margin-top: 40px;
+        padding-top: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="thank-you-section">
+      <div class="thank-you-content">
+        
+        <!-- Success Icon -->
+        <div class="success-icon">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" fill="none" stroke="#0070d2" stroke-width="3"/>
+            <path d="M25 40 L35 50 L55 30" fill="none" stroke="#0070d2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <!-- Headline -->
+        <h1>Thank You for Reaching Out</h1>
+
+        <!-- Confirmation Message -->
+        <div class="thank-you-message">
+          <p>Your inquiry has been received. A Hitpoint governance advisor will review your request and respond within one business day.</p>
+          <p>We appreciate your interest in strengthening your organisation's SAP Concur governance.</p>
+        </div>
+
+        <!-- 3-Step Process -->
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Inquiry Received</h3>
+            <p class="step-description">Your details have been securely submitted</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Advisor Review</h3>
+            <p class="step-description">A governance specialist will assess your needs</p>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Personal Follow-up</h3>
+            <p class="step-description">We'll reach out within one business day</p>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="thank-you-actions">
+          <a href="what-we-deliver.html" class="btn-primary-large">Explore Our Governance Services</a>
+          <a href="governance-risk-snapshot.html" class="btn-secondary-large">Take the Governance Risk Snapshot</a>
+          <a href="index.html" class="text-link">Return to Home</a>
+        </div>
+
+        <!-- Trust Element -->
+        <div class="trust-line">
+          Hitpoint is an award-winning SAP Concur implementation partner trusted by organisations across Australia and ANZ.
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+
+
+

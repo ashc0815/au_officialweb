@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FBT & EOFY Governance — Concur FBT Compliance — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <p style="font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px;">Concur FBT Compliance · Governance for FBT & EOFY</p>
+        <h1>FBT & EOFY Governance in SAP Concur</h1>
+        <p>Reduce FBT exposure by enforcing classification before reimbursement — not during EOFY clean-ups.</p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="content-block-inner">
+        <h2>Why FBT risk quietly builds all year</h2>
+        <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.7;">FBT exposure rarely comes from one big mistake. It builds when:</p>
+        <ul>
+          <li>Classification relies on judgement</li>
+          <li>Reviews are pushed to month-end or EOFY</li>
+          <li>Exceptions accumulate without visibility</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">By EOFY, finance teams are fixing issues that should have been prevented.</p>
+
+        <div class="divider"></div>
+
+        <h2>What "FBT-ready" actually means</h2>
+        <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.7;">FBT compliance only works when decisions are made at submission, not after payment.</p>
+        <p style="margin-bottom: 12px; font-weight: 500; color: var(--text);">A governance-led setup ensures:</p>
+        <ul>
+          <li>FBT categorisation enforced before reimbursement</li>
+          <li>Policy logic applied consistently across users</li>
+          <li>Exceptions visible early — not discovered at year-end</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">Compliance is designed in, not cleaned up later.</p>
+
+        <div class="divider"></div>
+
+        <h2>What CFOs actually see</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">CFOs gain visibility into:</p>
+        <ul>
+          <li>FBT category summaries by entity</li>
+          <li>Policy exception trends</li>
+          <li>EOFY-ready FBT exposure views</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">EOFY becomes a review — not a firefight.</p>
+
+        <div class="divider"></div>
+
+        <h2>Who this is for</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">Designed for organisations that:</p>
+        <ul>
+          <li>Manage growing expense complexity</li>
+          <li>Face recurring EOFY FBT pressure</li>
+          <li>Want system-led consistency without re-implementation</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div style="padding: 32px; background: var(--bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--border-soft);">
+          <h2 style="margin-top: 0;">Entry Offer</h2>
+          <h3 style="font-size: 20px; font-weight: 600; margin: 0 0 16px; color: var(--text);">FBT Governance Snapshot</h3>
+          <p style="margin-bottom: 12px; font-weight: 500; color: var(--text);">A focused review delivering:</p>
+          <ul>
+            <li>Clear FBT exposure mapping</li>
+            <li>Policy enforcement gaps</li>
+            <li>Practical remediation actions</li>
+          </ul>
+          <p style="margin-top: 24px; margin-bottom: 0;">
+            <a href="contact.html" class="btn-primary">Review FBT Governance Exposure</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

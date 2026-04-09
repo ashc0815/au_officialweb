@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Who We Work With — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <h1>Who This Is For</h1>
+        <p>Designed for CFOs and Finance Controllers who are ready to strengthen governance — without a full system overhaul.</p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="content-block-inner">
+        <h2>Who We Work With</h2>
+        <p style="margin-bottom: 24px; color: var(--text-muted); line-height: 1.7;">For CFOs and Finance Controllers who:</p>
+        <ul>
+          <li>On SAP Concur, but outgrown your original setup</li>
+          <li>Manage multiple entities, regions, or currencies</li>
+          <li>Are preparing for audit, board review, or tax scrutiny</li>
+          <li>Operate in or with China and lack invoice transparency</li>
+          <li>Want stronger governance without a full system overhaul.</li>
+        </ul>
+        <blockquote class="highlight">
+          Most governance issues don't appear in dashboards.<br>
+          They appear between approvals, exceptions, and month-end work.
+        </blockquote>
+        <p style="margin-top: 24px;">
+          <a href="contact.html" class="btn-primary">Request a Governance Discussion</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur Partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

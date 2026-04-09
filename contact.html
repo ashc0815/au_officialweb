@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-layout">
+      <div class="contact-intro">
+        <h1>Contact Hitpoint</h1>
+        <p>Please complete the form and a Hitpoint consultant will be in touch to discuss the best fit for your organisation.</p>
+
+        <a href="assets/idc-genai-roi.pdf" class="contact-download-btn" target="_blank" rel="noopener noreferrer">Download IDC Report</a>
+
+        <section class="credibility-panel" aria-labelledby="credibility-title">
+          <h2 id="credibility-title">IDC MarketScape Names SAP Concur a Leader in AI-Enabled Travel &amp; Expense</h2>
+          <p>SAP Concur was the only vendor named a Leader in all four IDC MarketScape 2025 Vendor Assessment reports for AI-Enabled Travel and Expense Applications: Enterprise, Midmarket, Small Business, and Corporate Travel Booking.</p>
+          <figure class="credibility-figure">
+            <img src="images/idc-marketscape.png" alt="IDC MarketScape 2025 - SAP Concur Leader" />
+            <figcaption>Source: IDC, 2025</figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <div class="contact-form-card">
+        <h2>Request a Governance Discussion</h2>
+        <p class="form-intro">Please provide your details and we will be in touch shortly.</p>
+
+        <!-- 
+          ========================================================================
+          SALESFORCE WEB-TO-LEAD FORM
+          ========================================================================
+          - Submits directly to Salesforce
+          - Redirects to thank-you.html after successful submission
+          ========================================================================
+        -->
+          <form 
+            id="contactForm" 
+            action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DQE00000AGawD" 
+            method="POST"
+          >
+            
+            <!-- ============ SALESFORCE HIDDEN FIELDS ============ -->
+            
+            <!-- Salesforce Organization ID -->
+            <input type="hidden" name="oid" value="00DQE00000AGawD" />
+            
+            <!-- Return URL after submission -->
+            <input type="hidden" name="retURL" value="https://auofficialweb.vercel.app/thank-you.html" />
+            
+            <!-- ============ VISIBLE FORM FIELDS ============ -->
+            
+            <div class="form-group">
+              <label for="reason">Reason for contact *</label>
+              <select id="reason" name="00NOb00000Bi5dZ" required>
+                <option value="">Please select one</option>
+                <option value="Governance Risk Snapshot">Governance Risk Snapshot</option>
+                <option value="Audit Readiness">Audit Readiness</option>
+                <option value="FBT &amp; EOFY Governance">FBT &amp; EOFY Governance</option>
+                <option value="China Invoice Compliance">China Invoice Compliance</option>
+                <option value="General inquiry">General inquiry</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="first_name">First name *</label>
+              <input type="text" id="first_name" name="first_name" required placeholder="Your first name" />
+            </div>
+            
+            <div class="form-group">
+              <label for="last_name">Last name *</label>
+              <input type="text" id="last_name" name="last_name" required placeholder="Your last name" />
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Company *</label>
+              <input type="text" id="company" name="company" required placeholder="Your company" />
+            </div>
+            
+            <div class="form-group">
+              <label for="industry">Industry</label>
+              <select id="industry" name="industry">
+                <option value="">Please select your industry</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Apparel">Apparel</option>
+                <option value="Banking">Banking</option>
+                <option value="Biotechnology">Biotechnology</option>
+                <option value="Chemicals">Chemicals</option>
+                <option value="Communications">Communications</option>
+                <option value="Construction">Construction</option>
+                <option value="Consulting">Consulting</option>
+                <option value="E-commerce">E-commerce</option>
+                <option value="Education">Education</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Energy">Energy</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Environmental">Environmental</option>
+                <option value="Finance">Finance</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Food &amp; Beverage">Food &amp; Beverage</option>
+                <option value="Government">Government</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Insurance">Insurance</option>
+                <option value="IT Services and IT Consulting">IT Services and IT Consulting</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Media">Media</option>
+                <option value="Not For Profit">Not For Profit</option>
+                <option value="Professional services">Professional services</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Recreation">Recreation</option>
+                <option value="Retail">Retail</option>
+                <option value="Security">Security</option>
+                <option value="Shipping">Shipping</option>
+                <option value="Software">Software</option>
+                <option value="Technology">Technology</option>
+                <option value="Telecommunications">Telecommunications</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            
+
+            <div class="form-group">
+              <label for="title">Title *</label>
+              <input type="text" id="title" name="title" required placeholder="e.g. CFO, Finance Controller" />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your@company.com" />
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+61 2 0000 0000" />
+            </div>
+            
+            <div class="form-group">
+              <label for="description">Message</label>
+              <textarea id="description" name="00NOb00000BiDb7" placeholder="Tell us about your governance priorities..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn-submit">Request a Governance Discussion</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+
+    // No need to intercept form — it submits directly to Salesforce
+    // and redirects to thank-you.html via retURL
+  </script>
+</body>
+</html>

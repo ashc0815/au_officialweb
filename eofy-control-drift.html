@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EOFY Governance Review — Concur EOFY Control — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <p style="font-size: 14px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 8px;">Concur EOFY Governance Control · Governance for EOFY Control Drift</p>
+        <h1>EOFY Governance Review for SAP Concur Environments</h1>
+        <p>Identify control drift before EOFY pressure exposes it.</p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="content-block-inner">
+        <h2>Why governance drifts after go-live</h2>
+        <p style="margin-bottom: 16px; color: var(--text-muted); line-height: 1.7;">Most governance failures don't happen at implementation. They happen quietly over time.</p>
+        <p style="margin-bottom: 12px; font-weight: 500; color: var(--text);">Common triggers include:</p>
+        <ul>
+          <li>Business growth or restructuring</li>
+          <li>New entities or approval layers</li>
+          <li>Exceptions becoming routine</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">Nothing looks broken — until EOFY or audit pressure reveals the gaps.</p>
+
+        <div class="divider"></div>
+
+        <h2>The real EOFY risk: control drift</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">When governance drifts:</p>
+        <ul>
+          <li>Approval accountability weakens</li>
+          <li>Exceptions lose clear ownership</li>
+          <li>CFO confidence erodes</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">The risk isn't missing data — it's unclear control.</p>
+
+        <div class="divider"></div>
+
+        <h2>What an EOFY governance review restores</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">A focused review helps:</p>
+        <ul>
+          <li>Re-align approvals with actual delegation</li>
+          <li>Restore visibility over exceptions</li>
+          <li>Stabilise controls without disruption</li>
+        </ul>
+        <p style="margin-top: 20px; color: var(--text-muted); line-height: 1.7;">This is governance maintenance — not re-implementation.</p>
+
+        <div class="divider"></div>
+
+        <h2>Who this is for</h2>
+        <p style="margin-bottom: 12px; color: var(--text-muted); line-height: 1.7;">Designed for organisations that:</p>
+        <ul>
+          <li>Changed materially in the last 12–24 months</li>
+          <li>Feel EOFY is getting harder each year</li>
+          <li>Want stability without major change programs</li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <div style="padding: 32px; background: var(--bg-soft); border-radius: var(--radius-lg); border: 1px solid var(--border-soft);">
+          <h2 style="margin-top: 0;">Entry Offer</h2>
+          <h3 style="font-size: 20px; font-weight: 600; margin: 0 0 16px; color: var(--text);">EOFY Governance Review</h3>
+          <p style="margin-bottom: 12px; font-weight: 500; color: var(--text);">Delivering:</p>
+          <ul>
+            <li>Control-drift exposure mapping</li>
+            <li>EOFY risk prioritisation</li>
+            <li>Clear stabilisation actions</li>
+          </ul>
+          <p style="margin-top: 24px; margin-bottom: 0;">
+            <a href="contact.html" class="btn-primary">Book an EOFY Governance Review</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

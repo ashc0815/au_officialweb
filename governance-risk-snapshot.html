@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Governance Risk Snapshot — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <h1>Governance Risk Snapshot</h1>
+        <p>A focused review of your Concur setup and spend controls — so you know exactly where you stand.</p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="content-block-inner">
+
+        <h2>What It Is</h2>
+        <p style="line-height: 1.7; color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px;">A two-week health check for organisations already using SAP Concur — or evaluating whether their current T&amp;E processes are fit for purpose. We review your configuration, workflows, and controls, then tell you plainly what's working, what isn't, and what to do about it.</p>
+
+        <h2>What You Get</h2>
+        <ul style="margin-bottom: 40px;">
+          <li>A review of your current Concur configuration and approval workflows</li>
+          <li>Identification of policy gaps, duplicate risk, and audit exposure</li>
+          <li>Clear recommendations: govern, optimise, or leave as-is</li>
+        </ul>
+
+        <h2>Who It's For</h2>
+        <ul style="margin-bottom: 40px;">
+          <li>Finance leaders preparing for an internal or external audit</li>
+          <li>Organisations with Concur already in place but unsure it's configured correctly</li>
+          <li>Teams looking to improve visibility and tighten spend controls before a board review</li>
+        </ul>
+
+        <p class="highlight" style="margin-bottom: 40px;">This is how CFOs understand where risk already exists — before it becomes visible to auditors or the Board.</p>
+
+        <p style="margin-bottom: 16px;">
+          <a href="contact.html" class="btn-primary">Request Your Snapshot</a>
+        </p>
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Typically completed within two weeks of scoping.</p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

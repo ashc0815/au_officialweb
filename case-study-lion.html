@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Study: Lion — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Breadcrumb */
+    .breadcrumb {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px 24px;
+    }
+
+    .breadcrumb a {
+      font-size: 14px;
+      color: #0066cc;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .case-hero {
+      background: #f7f8fa;
+      padding: 48px 24px;
+    }
+
+    .case-hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .case-hero-logo {
+      max-height: 60px;
+      width: auto;
+    }
+
+    .case-hero h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 16px 0 0;
+    }
+
+    .case-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .case-hero-tag {
+      display: inline-block;
+      border: 1.5px solid #2196F3;
+      color: #2196F3;
+      background: white;
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    /* Content Sections */
+    .case-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    .case-section {
+      margin-bottom: 64px;
+    }
+
+    .case-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .case-section h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 12px;
+    }
+
+    .case-section-line {
+      width: 48px;
+      height: 3px;
+      background: #0066cc;
+      margin-bottom: 24px;
+    }
+
+    .case-section p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 16px;
+    }
+
+    .case-section ul {
+      margin: 16px 0;
+      padding-left: 28px;
+    }
+
+    .case-section li {
+      font-size: 16px;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .case-section li::marker {
+      color: #0066cc;
+    }
+
+    /* CTA Section */
+    .case-cta {
+      background: #f7f8fa;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .case-cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .case-cta h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin: 0 0 12px;
+    }
+
+    .case-cta p {
+      font-size: 16px;
+      color: #444;
+      margin: 0 0 24px;
+    }
+
+    .case-cta .btn-primary {
+      display: inline-flex;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="case-studies.html">← Back to Case Studies</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="case-hero">
+      <div class="case-hero-inner">
+        <svg class="case-hero-logo" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="40" r="20" fill="#b8860b" opacity="0.95"/>
+          <circle cx="80" cy="40" r="20" fill="#daa520" opacity="0.85"/>
+          <circle cx="110" cy="40" r="20" fill="#b8860b" opacity="0.75"/>
+        </svg>
+        <h1>Lion</h1>
+        <div class="case-hero-tags">
+          <span class="case-hero-tag">Australia & New Zealand</span>
+          <span class="case-hero-tag">Food & Beverage</span>
+          <span class="case-hero-tag">2,700 employees</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="case-content">
+      
+      <!-- The Challenge -->
+      <section class="case-section">
+        <h2>The Challenge</h2>
+        <div class="case-section-line"></div>
+        <p>
+          Lion, one of Australasia's largest beverage companies, was reliant on largely manual expense management processes with no integration to its SAP ERP system. Employees had to populate blank forms with all expense details, and receipts could not be attached at the expense item level — making approval and audit difficult and time-consuming. The company's external travel management company handled all corporate travel bookings, and Lion had little or no visibility into travel and expense spend, making it difficult to encourage compliant behaviours or report accurately on spending.
+        </p>
+      </section>
+
+      <!-- What We Delivered -->
+      <section class="case-section">
+        <h2>What We Delivered</h2>
+        <div class="case-section-line"></div>
+        <ul>
+          <li>Implemented Concur Expense integrated with Lion's SAP ERP and SAP HR systems, enabling pre-populated fields, drop-down code selection, and automatic employee profile updates</li>
+          <li>Deployed Concur Travel to give employees a direct self-service booking tool with embedded policy rules and preferred vendor controls</li>
+          <li>Rolled out Concur Detect to move from auditing a small random sample of expenses to 100% automated audit coverage using AI and machine learning</li>
+          <li>Developed 10+ custom reports through Consultative Intelligence, integrated into Microsoft Power BI dashboards for monthly spending insights and leader-level compliance visibility</li>
+        </ul>
+      </section>
+
+      <!-- The Outcome -->
+      <section class="case-section">
+        <h2>The Outcome</h2>
+        <div class="case-section-line"></div>
+        <p>
+          Lion reduced expense processing time by at least 50% and achieved 85%+ direct booking rates through Concur Travel. With Concur Detect, the company moved to 100% audit coverage — identifying and auditing over 600 high-risk expenses in the first four weeks alone. The integrated platform gave Lion's leadership team real-time visibility into spend and policy compliance across both Australian and New Zealand operations, transforming what was previously a week-long manual investigation process into an automated, real-time output.
+        </p>
+      </section>
+
+    </div>
+
+    <!-- CTA Section -->
+    <section class="case-cta">
+      <div class="case-cta-inner">
+        <h3>Ready to strengthen your SAP Concur governance?</h3>
+        <p>Start with a Governance Risk Snapshot to identify control gaps in your environment.</p>
+        <a href="governance-risk-snapshot.html" class="btn-primary">Start with a Governance Snapshot</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Case Studies — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .case-studies-section {
+      padding: 48px 24px 80px;
+    }
+
+    .case-studies-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .case-studies-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .case-studies-grid-row-2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 1100px) {
+      .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-studies-grid-row-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .case-studies-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .case-studies-grid-row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .case-study-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      cursor: pointer;
+    }
+
+    .case-study-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      border-color: var(--primary);
+    }
+
+    .case-study-logo {
+      background: #f5f5f5;
+      padding: 17px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100px;
+    }
+
+    .case-study-logo svg {
+      max-height: 60px;
+      width: auto;
+      max-width: 100%;
+    }
+
+    .case-study-meta {
+      padding: 15px 17px 17px;
+      flex: 1;
+    }
+
+    .case-study-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .case-tag {
+      display: inline-block;
+      border: 1.5px solid #2196F3;
+      color: #2196F3;
+      background: white;
+      border-radius: 20px;
+      padding: 3px 11px;
+      font-size: 12px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .case-study-focus {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .case-study-arrow {
+      padding: 0 17px 15px;
+      font-size: 23px;
+      color: var(--primary);
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .case-study-card:hover .case-study-arrow {
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <h1>Case Studies</h1>
+        <p>How organisations across ANZ and beyond are getting more from SAP Concur.</p>
+      </div>
+    </section>
+
+    <section class="case-studies-section">
+      <div class="case-studies-inner">
+        <div class="case-studies-grid">
+          
+        <!-- Case Study 1: Melbourne IT Group -->
+          <a href="case-study-melbourne-it.html" class="case-study-card">
+            <div class="case-study-logo">
+              <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="40" height="40" fill="#0070d2" rx="4"/>
+                <rect x="68" y="20" width="40" height="40" fill="#005a9e" rx="4"/>
+                <rect x="116" y="20" width="40" height="40" fill="#003d6b" rx="4"/>
+              <text x="100" y="72" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1d21" text-anchor="middle">Melbourne IT Group</text>
+              </svg>
+            </div>
+            <div class="case-study-meta">
+              <div class="case-study-tags">
+                <span class="case-tag">Australia</span>
+                <span class="case-tag">IT Services</span>
+              <span class="case-tag">Local Expertise</span>
+              </div>
+              <div class="case-study-focus">
+                FBT control · Growing transaction volume · Finance team stabilisation
+              </div>
+            </div>
+            <div class="case-study-arrow">→</div>
+          </a>
+
+          <!-- Case Study 2: Yihai International -->
+          <a href="case-study-yihai.html" class="case-study-card">
+            <div class="case-study-logo">
+              <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="40" r="18" fill="#d32f2f" opacity="0.9"/>
+                <circle cx="70" cy="40" r="18" fill="#d32f2f" opacity="0.7"/>
+                <circle cx="90" cy="40" r="18" fill="#d32f2f" opacity="0.5"/>
+              <text x="100" y="72" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1d21" text-anchor="middle">Yihai International</text>
+              </svg>
+            </div>
+            <div class="case-study-meta">
+              <div class="case-study-tags">
+                <span class="case-tag">11 countries</span>
+                <span class="case-tag">Manufacturing</span>
+                <span class="case-tag">Global HQ</span>
+              </div>
+              <div class="case-study-focus">
+                Global control · Tax compliance · Scalable governance design
+              </div>
+            </div>
+            <div class="case-study-arrow">→</div>
+          </a>
+
+          <!-- Case Study 3: IDP Education -->
+          <a href="case-study-idp-education.html" class="case-study-card">
+            <div class="case-study-logo">
+              <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="25" width="50" height="30" fill="#ff9800" rx="3"/>
+                <rect x="90" y="25" width="50" height="30" fill="#ffb74d" rx="3"/>
+                <rect x="60" y="50" width="50" height="15" fill="#ff9800" rx="2"/>
+              <text x="100" y="72" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1d21" text-anchor="middle">IDP Education</text>
+              </svg>
+            </div>
+            <div class="case-study-meta">
+              <div class="case-study-tags">
+                <span class="case-tag">Australia</span>
+                <span class="case-tag">50+ countries</span>
+                <span class="case-tag">Education</span>
+              </div>
+              <div class="case-study-focus">
+                Expense automation · Invoice standardisation · Data-driven insights
+              </div>
+            </div>
+            <div class="case-study-arrow">→</div>
+          </a>
+        </div>
+
+        <div class="case-studies-grid-row-2">
+          <!-- Case Study 4: Lion -->
+          <a href="case-study-lion.html" class="case-study-card">
+            <div class="case-study-logo">
+              <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="40" r="20" fill="#b8860b" opacity="0.95"/>
+                <circle cx="80" cy="40" r="20" fill="#daa520" opacity="0.85"/>
+                <circle cx="110" cy="40" r="20" fill="#b8860b" opacity="0.75"/>
+              <text x="100" y="72" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1d21" text-anchor="middle">Lion</text>
+              </svg>
+            </div>
+            <div class="case-study-meta">
+              <div class="case-study-tags">
+                <span class="case-tag">Australia & NZ</span>
+                <span class="case-tag">Food & Beverage</span>
+                <span class="case-tag">2,700 employees</span>
+              </div>
+              <div class="case-study-focus">
+                100% audit coverage · Policy compliance · 50% faster expense processing
+              </div>
+            </div>
+            <div class="case-study-arrow">→</div>
+          </a>
+
+          <!-- Case Study 5: Lindt & Sprüngli Australia -->
+          <a href="case-study-lindt.html" class="case-study-card">
+            <div class="case-study-logo">
+              <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="30" y="25" width="35" height="35" fill="#8b6914" rx="3"/>
+                <rect x="75" y="25" width="35" height="35" fill="#d4af37" rx="3"/>
+                <rect x="120" y="25" width="35" height="35" fill="#8b6914" rx="3"/>
+              <text x="100" y="72" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1d21" text-anchor="middle">Lindt & Sprüngli</text>
+              </svg>
+            </div>
+            <div class="case-study-meta">
+              <div class="case-study-tags">
+                <span class="case-tag">Australia & NZ</span>
+                <span class="case-tag">Retail</span>
+                <span class="case-tag">550 employees</span>
+              </div>
+              <div class="case-study-focus">
+                FBT reduction · Spend visibility · NZ expansion
+              </div>
+            </div>
+            <div class="case-study-arrow">→</div>
+          </a>
+
+          <!-- Case Study 6: Curtin University -->
+          <a href="case-study-curtin.html" class="case-study-card">
+            <div class="case-study-logo">
+              <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="25" y="20" width="35" height="40" fill="#ff8c00" rx="4"/>
+                <rect x="70" y="20" width="35" height="40" fill="#2c2c2c" rx="4"/>
+                <rect x="115" y="20" width="35" height="40" fill="#ff8c00" rx="4"/>
+              <text x="100" y="72" font-family="DM Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#1a1d21" text-anchor="middle">Curtin University</text>
+              </svg>
+            </div>
+            <div class="case-study-meta">
+              <div class="case-study-tags">
+                <span class="case-tag">Australia</span>
+                <span class="case-tag">Higher Education</span>
+                <span class="case-tag">3,200 staff</span>
+              </div>
+              <div class="case-study-focus">
+                FBT automation · 30% fewer claim errors · Mobile-first adoption
+              </div>
+            </div>
+            <div class="case-study-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+# Hitpoint AU Official Website — Cursor Rules
+# Source: https://github.com/ashc0815/au_officialweb
+# Deployed: https://auofficialweb.vercel.app
+
+## Project Overview
+Static HTML/CSS website for Hitpoint Solution AU — an SAP Concur implementation and governance partner for ANZ markets.
+Target audience: CFOs, Finance Directors, and procurement leads at mid-market Australian companies.
+No build system. No npm. No framework. Pure HTML5 + CSS3 + minimal vanilla JS.
+
+## Tech Stack
+- Pure static HTML5 + CSS3
+- Google Fonts: DM Sans (weights 400/500/600/700, ital, opsz 9..40)
+- Single global stylesheet: css/styles.css
+- CSS custom properties used throughout (e.g. var(--bg-soft))
+- Vanilla JS only — inline <script> at bottom of each page (nav toggle + year)
+- Salesforce Web-to-Lead on contact.html
+- Deployed on Vercel (auofficialweb.vercel.app)
+
+## Complete File Structure
+```
+au_officialweb/
+├── index.html                      # Homepage — hero + card grid linking to issue pages
+├── about-hitpoint.html             # About Hitpoint
+├── who-we-work-with.html           # Target ICP / client profiles
+├── what-we-deliver.html            # Services / deliverables
+├── governance-risk-snapshot.html   # Governance Risk Snapshot (main CTA destination)
+├── audit-readiness.html            # Issue page: Audit Readiness
+├── fbt-eofy.html                   # Issue page: FBT & EOFY
+├── eofy-control-drift.html         # Issue page: EOFY Control Drift
+├── china-invoice-compliance.html   # Issue page: China Invoice / Fapiao
+├── case-studies.html               # Case studies index
+├── case-study-curtin.html
+├── case-study-idp-education.html
+├── case-study-lindt.html
+├── case-study-lion.html
+├── case-study-melbourne-it.html
+├── case-study-yihai.html
+├── contact.html                    # Salesforce Web-to-Lead form
+├── thank-you.html                  # Post-submit confirmation
+├── css/
+│   └── styles.css                  # ALL styles here — single source of truth
+├── images/                         # e.g. sap-concur-award-2022.png
+└── assets/
+```
+
+## Standard Page Head (copy exactly)
+```html
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PAGE TITLE — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+```
+
+## Standard Header (copy exactly, same on all pages)
+```html
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="site-logo">Hitpoint</a>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="who-we-work-with.html">Who We Work With</a>
+      <a href="what-we-deliver.html">What We Deliver</a>
+      <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+      <a href="case-studies.html">Case Studies</a>
+      <a href="about-hitpoint.html">About Hitpoint</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+```
+
+## Standard Footer + Script (copy exactly, same on all pages)
+```html
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+    document.querySelector('.site-nav')?.classList.toggle('open');
+  });
+</script>
+```
+
+## Nav Rules
+- 7 items exactly as shown above — do not add or remove items
+- "Start with a Governance Snapshot" was intentionally removed as a nav item — do NOT re-add it
+- If you find it still present in any page (e.g. index.html), remove it
+- The Governance Snapshot CTA belongs in the hero section as .btn-primary, not in nav
+
+## Homepage Card Grid Pattern
+Issue pages are surfaced via .card-grid in index.html:
+```html
+<a href="PAGE.html" class="card">
+  <div class="card-icon" aria-hidden="true">EMOJI</div>
+  <h3>TITLE</h3>
+  <div class="card-desc"><ul><li>...</li></ul></div>
+  <span class="card-cta">Explore X →</span>
+</a>
+```
+The four cards link to: audit-readiness.html, fbt-eofy.html, eofy-control-drift.html, china-invoice-compliance.html
+
+## Credentials (display as-is, do not alter)
+- SAP Concur Distinguished Partner Award Winner (2022)
+- SAP Innovation Partner Nominee (2024)
+- VAR & Certified Implementation Partner (CIP)
+- Melbourne-based team supporting ANZ CFOs
+
+## Tone & Copy
+- Australian English: recognised, organised, colour, licence (noun)
+- B2B tone for ANZ CFOs and Finance Directors
+- Messaging: governance, audit confidence, EOFY outcomes, Board accountability
+- Key phrases: "audit-defensible", "EOFY-ready", "Board accountability"
+- Avoid implementation/configuration language — focus on business outcomes
+
+## Editing Rules
+1. Nav/header/footer change → apply to ALL .html files simultaneously
+2. Never rename or remove existing CSS classes
+3. Check css/styles.css before adding any new class — reuse existing ones
+4. Preserve the inline <script> at bottom of every page
+5. All href paths are relative (e.g. href="css/styles.css", not absolute)
+6. No inline styles — all CSS goes in css/styles.css
+
+## Contact Form — DO NOT MODIFY
+- Salesforce Web-to-Lead: do not change form action URL or hidden field values (OID etc.)
+- Post-submit redirect: thank-you.html
+
+## NEVER DO
+- Add npm / package.json / node_modules / build tools
+- Use Bootstrap, Tailwind, or any CSS framework
+- Add inline styles
+- Modify Salesforce form hidden fields
+- Re-add "Start with a Governance Snapshot" to the nav
+- Use absolute paths for local resources

@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What We Deliver — Hitpoint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Product Cards Grid */
+    .product-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    @media (max-width: 900px) {
+      .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-cards {
+        grid-template-columns: 1fr;
+        padding: 0 24px 48px;
+      }
+    }
+
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .product-card-header {
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 28px;
+      position: relative;
+    }
+
+    .banner-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 10px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .banner-title {
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .product-card-header.expense {
+      background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);
+    }
+
+    .product-card-header.invoice {
+      background: linear-gradient(135deg, #ea580c 0%, #f97316 100%);
+    }
+
+    .product-card-header.travel {
+      background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%);
+    }
+
+    .product-card-body {
+      padding: 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card h3 {
+      font-size: 20.625px;
+      font-weight: 600;
+      margin: 0 0 11.25px;
+      color: var(--text);
+    }
+
+    .product-card-desc {
+      font-size: 14.4375px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin: 0 0 18.75px;
+      flex: 1;
+    }
+
+    .product-card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 5.625px;
+      font-size: 14.4375px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      transition: gap 0.2s;
+      margin-top: auto;
+    }
+
+    .product-card:hover .product-card-cta {
+      gap: 9.375px;
+    }
+
+    .value-pillars-section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 96px 24px 96px;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0F6E56;
+      margin-bottom: 12px;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: #0F6E56;
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .value-pillars-bridge {
+      margin: 0 0 28px;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 0;
+    }
+
+    .pillar-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .pillar-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+      transform: translateY(-3px);
+    }
+
+    .pillar-icon-wrap {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pillar-icon-wrap svg {
+      width: 72px;
+      height: 72px;
+    }
+
+    .pillar-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1a202c;
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    .pillar-desc {
+      font-size: 15px;
+      line-height: 1.65;
+      color: #4a5568;
+      margin: 0 0 24px;
+      flex: 1;
+    }
+
+    .pillar-link {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0070d2;
+      text-decoration: none;
+      margin-top: auto;
+      padding-top: 20px;
+      display: inline-block;
+    }
+
+    .pillar-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .products-block {
+      padding-top: 56px;
+    }
+
+    .products-section-header {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px 40px;
+    }
+
+    .products-section-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    /* Detail View Modal */
+    .product-detail {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      overflow-y: auto;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .product-detail.active {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .product-detail-content {
+      background: #fff;
+      border-radius: var(--radius-lg);
+      max-width: 960px;
+      width: 100%;
+      position: relative;
+      animation: slideUp 0.3s ease;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes slideUp {
+      from { 
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .product-detail-header {
+      padding: 19.2px 25.6px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background: var(--border-soft);
+      border-color: var(--text-muted);
+    }
+
+    .close-button {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: var(--radius);
+      transition: all 0.2s;
+    }
+
+    .close-button:hover {
+      background: var(--bg-soft);
+      color: var(--text);
+    }
+
+    .product-detail-body {
+      padding: 38.4px 25.6px;
+    }
+
+    .product-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 51.2px;
+      align-items: start;
+    }
+
+    .product-layout.reverse {
+      direction: rtl;
+    }
+
+    .product-layout.reverse > * {
+      direction: ltr;
+    }
+
+    @media (max-width: 900px) {
+      .product-layout,
+      .product-layout.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr;
+      }
+    }
+
+    .product-text h2 {
+      font-size: 28.8px;
+      font-weight: 600;
+      margin: 0 0 12px;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .product-text h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .product-text p {
+      font-size: 14.4px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin: 0 0 32px;
+    }
+
+    .product-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 14.4px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .product-features li::before {
+      content: "✓";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 50%;
+      font-weight: 600;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .product-video {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #000;
+      box-shadow: var(--shadow-lg);
+      transform: scale(0.935);
+      transform-origin: center;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      background: linear-gradient(135deg, #1a2744 0%, #2d3a52 100%);
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a2744 0%, #2d3a52 100%);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .video-placeholder:hover {
+      background: linear-gradient(135deg, #1e2d4f 0%, #344160 100%);
+    }
+
+    .video-placeholder:hover .play-button {
+      transform: scale(1.1);
+      background: #0070d2;
+    }
+
+    .video-poster-title {
+      color: #fff;
+      font-size: 23.8px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      text-align: center;
+      letter-spacing: -0.02em;
+    }
+
+    .play-button {
+      width: 68px;
+      height: 68px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 112, 210, 0.4);
+      transition: all 0.3s;
+    }
+
+    .play-button::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 11.9px 0 11.9px 20.4px;
+      border-color: transparent transparent transparent #fff;
+      margin-left: 4px;
+    }
+
+    .video-label {
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+      right: 24px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* Hide video controls initially */
+    video::-webkit-media-controls {
+      display: none;
+    }
+
+    video.playing::-webkit-media-controls {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Hitpoint</a>
+      <nav class="site-nav">
+        <a href="who-we-work-with.html">Who We Work With</a>
+        <a href="what-we-deliver.html">What We Deliver</a>
+        <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="about-hitpoint.html">About Hitpoint</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-inner">
+        <h1>Outcomes CFOs can measure.</h1>
+        <p>Built to improve control, visibility, and adoption across every layer of spend.</p>
+      </div>
+    </section>
+
+    <!-- Product Cards Grid -->
+    <section class="value-pillars-section">
+      <span class="section-eyebrow">Business outcomes</span>
+      <p class="value-pillars-bridge">Based on IDC research with 1,000+ Concur customers — average 3-year ROI: 406%.</p>
+
+      <div class="pillars-grid">
+        <!-- Card 1: Cost control -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="44" width="12" height="20" rx="3" fill="#c7dff7"/>
+              <rect x="26" y="30" width="12" height="34" rx="3" fill="#84b8f0"/>
+              <rect x="44" y="16" width="12" height="48" rx="3" fill="#2e7fd6"/>
+              <path d="M6 12 L36 4 L66 12" stroke="#2e7fd6" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <circle cx="56" cy="8" r="6" fill="#2e7fd6"/>
+              <path d="M53 8 L55.5 10.5 L59 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="pillar-name">Cost control</p>
+          <p class="pillar-desc">Cut T&amp;E spend with policy-aligned guardrails and real-time budget visibility across every category.</p>
+          <a class="pillar-link" href="https://www.concur.com/control-company-costs" target="_blank" rel="noopener noreferrer">More about cost control</a>
+        </div>
+
+        <!-- Card 2: Compliance & risk -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="10" y="8" width="44" height="54" rx="5" fill="#c7dff7"/>
+              <rect x="16" y="8" width="44" height="54" rx="5" fill="#e8f1fb"/>
+              <rect x="16" y="8" width="44" height="54" rx="5" stroke="#2e7fd6" stroke-width="1.5"/>
+              <path d="M26 26 L46 26" stroke="#2e7fd6" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 34 L46 34" stroke="#2e7fd6" stroke-width="2" stroke-linecap="round"/>
+              <path d="M26 42 L38 42" stroke="#2e7fd6" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="51" cy="51" r="12" fill="#2e7fd6"/>
+              <path d="M46 51 L49.5 54.5 L56 47" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="pillar-name">Compliance &amp; risk</p>
+          <p class="pillar-desc">Enforce policy before spend happens — with automated audit trails, anomaly flags, and regulatory controls.</p>
+          <a class="pillar-link" href="https://www.concur.com/campaigns/compliance-fraud" target="_blank" rel="noopener noreferrer">More about compliance</a>
+        </div>
+
+        <!-- Card 3: Spend visibility -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="6" width="60" height="60" rx="8" fill="#e8f1fb"/>
+              <rect x="6" y="6" width="60" height="60" rx="8" stroke="#2e7fd6" stroke-width="1.5"/>
+              <rect x="14" y="30" width="10" height="22" rx="2" fill="#84b8f0"/>
+              <rect x="31" y="20" width="10" height="32" rx="2" fill="#2e7fd6"/>
+              <rect x="48" y="14" width="10" height="38" rx="2" fill="#1a5ca8"/>
+              <path d="M14 28 Q26 18 36 22 Q46 26 58 12" stroke="#f97316" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+            </svg>
+          </div>
+          <p class="pillar-name">Spend visibility</p>
+          <p class="pillar-desc">Real-time view across travel, expense, and AP in one place — so finance leaders can act, not just report.</p>
+          <a class="pillar-link" href="https://www.concur.com/blog/article/right-tools-and-approach-improve-spend-visibility-and-control" target="_blank" rel="noopener noreferrer">More about visibility</a>
+        </div>
+
+        <!-- Card 4: Employee experience -->
+        <div class="pillar-card">
+          <div class="pillar-icon-wrap">
+            <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="36" cy="22" r="14" fill="#c7dff7"/>
+              <circle cx="36" cy="22" r="14" stroke="#2e7fd6" stroke-width="1.5"/>
+              <circle cx="36" cy="20" r="6" fill="#2e7fd6"/>
+              <path d="M16 58 C16 46 56 46 56 58" fill="#e8f1fb" stroke="#2e7fd6" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="44" y="38" width="22" height="16" rx="4" fill="#2e7fd6"/>
+              <path d="M48 46 L50.5 48.5 L57 43" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="pillar-name">Employee experience</p>
+          <p class="pillar-desc">Faster reimbursements and less friction — so employees spend time on work, not chasing approvals.</p>
+          <a class="pillar-link" href="https://www.concur.com/campaigns/employee-engagement" target="_blank" rel="noopener noreferrer">More about experience</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="products-block">
+      <div class="products-section-header">
+        <span class="section-eyebrow">Our solutions</span>
+        <h2 class="products-section-title">Products that we offer</h2>
+      </div>
+      <section class="product-cards">
+      <div class="product-card" data-product="expense" role="button" tabindex="0" aria-label="Learn more about Concur Expense">
+        <div class="product-card-header expense">
+          <div class="banner-tag">Concur Expense</div>
+          <div class="banner-title">Every claim.<br>Audited.</div>
+        </div>
+        <div class="product-card-body">
+          <h3>Concur Expense</h3>
+          <p class="product-card-desc">Standardise employee spending and simplify reimbursements with policy-aligned expense reporting — reducing manual effort while keeping every claim auditable and compliant.</p>
+          <span class="product-card-cta">See how expense works →</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-product="invoice" role="button" tabindex="0" aria-label="Learn more about Concur Invoice">
+        <div class="product-card-header invoice">
+          <div class="banner-tag">Concur Invoice</div>
+          <div class="banner-title">No invoice<br>lost. Ever.</div>
+        </div>
+        <div class="product-card-body">
+          <h3>Concur Invoice</h3>
+          <p class="product-card-desc">Automate accounts payable workflows with greater control and transparency — improving cash flow visibility while ensuring every dollar is reviewed, approved, and traceable.</p>
+          <span class="product-card-cta">Explore invoice automation →</span>
+        </div>
+      </div>
+
+      <div class="product-card" data-product="travel" role="button" tabindex="0" aria-label="Learn more about Concur Travel">
+        <div class="product-card-header travel">
+          <div class="banner-tag">Concur Travel</div>
+          <div class="banner-title">Book smart.<br>Travel safe.</div>
+        </div>
+        <div class="product-card-body">
+          <h3>Concur Travel</h3>
+          <p class="product-card-desc">Book policy-compliant travel in one guided workflow — with real-time duty-of-care visibility, preferred supplier rates, and full itinerary tracking.</p>
+          <span class="product-card-cta">View travel features →</span>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- Concur Expense Detail View -->
+    <div class="product-detail" id="expense-detail" role="dialog" aria-labelledby="expense-title" aria-modal="true">
+      <div class="product-detail-content">
+        <div class="product-detail-header">
+          <button class="back-button" onclick="closeDetail('expense')">
+            <span>←</span>
+            <span>Back</span>
+          </button>
+          <button class="close-button" onclick="closeDetail('expense')" aria-label="Close">×</button>
+        </div>
+        <div class="product-detail-body">
+          <div class="product-layout">
+            <div class="product-text">
+              <h2 id="expense-title">Concur Expense</h2>
+              <h3>Expense management employees can actually adopt — without compromising control</h3>
+              <p>Employees shouldn't spend hours chasing receipts or correcting expense errors. Concur Expense simplifies day-to-day expense reporting while ensuring every claim aligns with company policy and audit requirements.</p>
+              <ul class="product-features">
+                <li>Capture receipts instantly, wherever spending happens</li>
+                <li>Automatically extract and categorise expense data with minimal manual input</li>
+                <li>Streamline approvals and reimbursements through a single, controlled dashboard</li>
+                <li>Use AI-driven checks to strengthen compliance and proactively identify anomalies</li>
+        </ul>
+            </div>
+            <div class="product-video">
+              <div class="video-container">
+                <video id="expense-video" preload="metadata">
+                  <source src="assets/videos/Concur-Expense-Demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-placeholder" onclick="playVideo('expense-video')">
+                  <div class="video-poster-title">Concur Expense</div>
+                  <div class="play-button" aria-label="Play video"></div>
+                  <div class="video-label">Demo Video</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Concur Invoice Detail View -->
+    <div class="product-detail" id="invoice-detail" role="dialog" aria-labelledby="invoice-title" aria-modal="true">
+      <div class="product-detail-content">
+        <div class="product-detail-header">
+          <button class="back-button" onclick="closeDetail('invoice')">
+            <span>←</span>
+            <span>Back</span>
+          </button>
+          <button class="close-button" onclick="closeDetail('invoice')" aria-label="Close">×</button>
+        </div>
+        <div class="product-detail-body">
+          <div class="product-layout reverse">
+            <div class="product-video">
+              <div class="video-container">
+                <video id="invoice-video" preload="metadata">
+                  <source src="assets/videos/Concur-Invoice-Demo.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="video-placeholder" onclick="playVideo('invoice-video')">
+                  <div class="video-poster-title">Concur Invoice</div>
+                  <div class="play-button" aria-label="Play video"></div>
+                  <div class="video-label">Demo Video</div>
+                </div>
+              </div>
+            </div>
+            <div class="product-text">
+              <h2 id="invoice-title">Concur Invoice</h2>
+              <h3>Turn accounts payable into a controlled, visible, and auditable process</h3>
+              <p>Vendor payments affect profitability just as directly as revenue — yet many AP teams still rely on fragmented, manual workflows. Concur Invoice brings structure, visibility, and governance to invoice management.</p>
+              <ul class="product-features">
+                <li>Gain early visibility into vendor spend and improve cost control</li>
+                <li>Strengthen compliance while reducing the risk of errors and fraud</li>
+                <li>Enable secure, mobile-friendly invoice processing for distributed teams</li>
+                <li>Capture clean, structured data to support better financial decisions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-detail" id="travel-detail" role="dialog" aria-labelledby="travel-title" aria-modal="true">
+      <div class="product-detail-content">
+        <div class="product-detail-header">
+          <button class="back-button" onclick="closeDetail('travel')">
+            <span>←</span>
+            <span>Back</span>
+          </button>
+          <button class="close-button" onclick="closeDetail('travel')" aria-label="Close">×</button>
+        </div>
+        <div class="product-detail-body">
+          <div class="product-layout">
+            <div class="product-text">
+              <h2 id="travel-title">Concur Travel</h2>
+              <h3>Book smarter, travel safer, spend less — without policing your people</h3>
+              <p>Business travel is one of the largest and least controlled expense categories for most organisations. Concur Travel brings structure to the booking process while giving travellers the flexibility they expect.</p>
+              <ul class="product-features">
+                <li>Guide employees to policy-compliant options at the point of booking</li>
+                <li>Access preferred supplier rates and consolidated travel inventory</li>
+                <li>Track itineraries in real time for duty-of-care and risk response</li>
+                <li>Connect travel spend directly to expense reports — eliminating manual reconciliation</li>
+              </ul>
+            </div>
+            <div class="product-video">
+              <div class="video-container">
+                <div class="video-placeholder" style="cursor:default;">
+                  <div class="video-poster-title">Concur Travel</div>
+                  <div class="video-label">Demo coming soon</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile nav toggle
+    document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+      document.querySelector('.site-nav')?.classList.toggle('open');
+    });
+
+    // Product card click handlers
+    document.querySelectorAll('.product-card').forEach(card => {
+      const openDetail = () => {
+        const product = card.dataset.product;
+        document.getElementById(`${product}-detail`).classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      card.addEventListener('click', openDetail);
+      card.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openDetail();
+        }
+      });
+    });
+
+    // Close detail view
+    function closeDetail(product) {
+      const detail = document.getElementById(`${product}-detail`);
+      detail.classList.remove('active');
+      document.body.style.overflow = '';
+      
+      // Pause video if playing
+      const video = document.getElementById(`${product}-video`);
+      if (video && !video.paused) {
+        video.pause();
+        video.currentTime = 0;
+        video.classList.remove('playing');
+        video.parentElement.querySelector('.video-placeholder').style.display = 'flex';
+      }
+    }
+
+    // Close on background click
+    document.querySelectorAll('.product-detail').forEach(detail => {
+      detail.addEventListener('click', (e) => {
+        if (e.target === detail) {
+          const product = detail.id.replace('-detail', '');
+          closeDetail(product);
+        }
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.product-detail.active').forEach(detail => {
+          const product = detail.id.replace('-detail', '');
+          closeDetail(product);
+        });
+      }
+    });
+
+    // Play video
+    function playVideo(videoId) {
+      const video = document.getElementById(videoId);
+      const placeholder = video.parentElement.querySelector('.video-placeholder');
+      
+      if (video) {
+        video.classList.add('playing');
+        video.controls = true;
+        placeholder.style.display = 'none';
+        video.play();
+      }
+    }
+
+    // Reset video when it ends
+    document.querySelectorAll('video').forEach(video => {
+      video.addEventListener('ended', () => {
+        video.classList.remove('playing');
+        video.controls = false;
+        video.currentTime = 0;
+        video.parentElement.querySelector('.video-placeholder').style.display = 'flex';
+      });
+    });
+  </script>
+</body>
+</html>
