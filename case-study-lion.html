@@ -9,146 +9,39 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    /* Breadcrumb */
-    .breadcrumb {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 16px 24px;
-    }
-
-    .breadcrumb a {
-      font-size: 14px;
-      color: #0066cc;
-      text-decoration: none;
-      transition: text-decoration 0.2s;
-    }
-
-    .breadcrumb a:hover {
-      text-decoration: underline;
-    }
-
-    /* Hero Section */
-    .case-hero {
-      background: #f7f8fa;
-      padding: 48px 24px;
-    }
-
-    .case-hero-inner {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .case-hero-logo {
-      max-height: 60px;
-      width: auto;
-    }
-
-    .case-hero h1 {
-      font-size: 32px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin: 16px 0 0;
-    }
-
-    .case-hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .case-hero-tag {
-      display: inline-block;
-      border: 1.5px solid #2196F3;
-      color: #2196F3;
-      background: white;
-      border-radius: 20px;
-      padding: 5px 16px;
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    /* Content Sections */
-    .case-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 64px 24px;
-    }
-
-    .case-section {
-      margin-bottom: 64px;
-    }
-
-    .case-section:last-child {
-      margin-bottom: 0;
-    }
-
-    .case-section h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin: 0 0 12px;
-    }
-
-    .case-section-line {
-      width: 48px;
-      height: 3px;
-      background: #0066cc;
-      margin-bottom: 24px;
-    }
-
-    .case-section p {
-      font-size: 16px;
-      line-height: 1.75;
-      color: #444;
-      margin-bottom: 16px;
-    }
-
-    .case-section ul {
-      margin: 16px 0;
-      padding-left: 28px;
-    }
-
-    .case-section li {
-      font-size: 16px;
-      line-height: 1.75;
-      color: #444;
-      margin-bottom: 12px;
-      position: relative;
-    }
-
-    .case-section li::marker {
-      color: #0066cc;
-    }
-
-    /* CTA Section */
-    .case-cta {
-      background: #f7f8fa;
-      padding: 48px 24px;
-      text-align: center;
-    }
-
-    .case-cta-inner {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .case-cta h3 {
-      font-size: 20px;
-      font-weight: 600;
-      color: #1a1a1a;
-      margin: 0 0 12px;
-    }
-
-    .case-cta p {
-      font-size: 16px;
-      color: #444;
-      margin: 0 0 24px;
-    }
-
-    .case-cta .btn-primary {
-      display: inline-flex;
-    }
+    .breadcrumb { max-width: 800px; margin: 0 auto; padding: 16px 24px; }
+    .breadcrumb a { font-size: 14px; color: #0066cc; text-decoration: none; transition: text-decoration 0.2s; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .case-hero { background: #f7f8fa; padding: 48px 24px; }
+    .case-hero-inner { max-width: 800px; margin: 0 auto; }
+    .case-hero h1 { font-size: 32px; font-weight: 700; color: #1a1a1a; margin: 0 0 8px; }
+    .case-hero-source { font-size: 14px; color: #666; margin: 0 0 16px; }
+    .case-hero-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .case-hero-tag { display: inline-block; border: 1.5px solid #2196F3; color: #2196F3; background: white; border-radius: 20px; padding: 5px 16px; font-size: 13px; font-weight: 500; }
+    .case-download { max-width: 800px; margin: 0 auto; padding: 24px 24px 0; }
+    .case-download-inner { display: flex; align-items: center; justify-content: space-between; background: #f0f5ff; border: 1px solid #d0e0f5; border-radius: 8px; padding: 16px 24px; gap: 16px; }
+    .case-download-inner p { font-size: 14px; color: #444; margin: 0; }
+    .btn-download { display: inline-flex; align-items: center; gap: 6px; background: #0066cc; color: white; text-decoration: none; font-size: 14px; font-weight: 600; padding: 8px 20px; border-radius: 6px; white-space: nowrap; transition: background 0.2s; }
+    .btn-download:hover { background: #0052a3; }
+    .case-content { max-width: 800px; margin: 0 auto; padding: 48px 24px 64px; }
+    .case-section { margin-bottom: 56px; }
+    .case-section:last-child { margin-bottom: 0; }
+    .case-section h2 { font-size: 24px; font-weight: 600; color: #1a1a1a; margin: 0 0 12px; }
+    .case-section-line { width: 48px; height: 3px; background: #0066cc; margin-bottom: 24px; }
+    .case-section p { font-size: 16px; line-height: 1.75; color: #444; margin-bottom: 16px; }
+    .case-section ul { margin: 16px 0; padding-left: 28px; }
+    .case-section li { font-size: 16px; line-height: 1.75; color: #444; margin-bottom: 12px; }
+    .case-section li::marker { color: #0066cc; }
+    .case-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px; }
+    .case-fact { background: #f7f8fa; padding: 16px 20px; border-radius: 8px; }
+    .case-fact-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #888; margin: 0 0 4px; }
+    .case-fact-value { font-size: 15px; font-weight: 500; color: #1a1a1a; margin: 0; }
+    @media (max-width: 600px) { .case-facts { grid-template-columns: 1fr; } .case-download-inner { flex-direction: column; align-items: flex-start; } }
+    .case-cta { background: #f7f8fa; padding: 48px 24px; text-align: center; }
+    .case-cta-inner { max-width: 600px; margin: 0 auto; }
+    .case-cta h3 { font-size: 20px; font-weight: 600; color: #1a1a1a; margin: 0 0 12px; }
+    .case-cta p { font-size: 16px; color: #444; margin: 0 0 24px; }
+    .case-cta .btn-primary { display: inline-flex; }
   </style>
 </head>
 <body>
@@ -156,56 +49,75 @@
     <div class="site-header-inner">
       <a href="index.html" class="site-logo">Hitpoint</a>
       <nav class="site-nav">
+        <a href="index.html">Home</a>
         <a href="who-we-work-with.html">Who We Work With</a>
         <a href="what-we-deliver.html">What We Deliver</a>
         <a href="governance-risk-snapshot.html">Governance Risk Snapshot</a>
         <a href="case-studies.html">Case Studies</a>
         <a href="about-hitpoint.html">About Hitpoint</a>
         <a href="contact.html">Contact Us</a>
+        <a href="governance-risk-snapshot.html">Start with a Governance Snapshot</a>
       </nav>
       <button class="nav-toggle" aria-label="Open menu">☰</button>
     </div>
   </header>
 
   <main>
-    <!-- Breadcrumb -->
     <div class="breadcrumb">
       <a href="case-studies.html">← Back to Case Studies</a>
     </div>
 
-    <!-- Hero Section -->
     <section class="case-hero">
       <div class="case-hero-inner">
-        <svg class="case-hero-logo" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="40" r="20" fill="#b8860b" opacity="0.95"/>
-          <circle cx="80" cy="40" r="20" fill="#daa520" opacity="0.85"/>
-          <circle cx="110" cy="40" r="20" fill="#b8860b" opacity="0.75"/>
-        </svg>
         <h1>Lion</h1>
+        <p class="case-hero-source">Published by SAP Concur</p>
         <div class="case-hero-tags">
-          <span class="case-hero-tag">Australia & New Zealand</span>
-          <span class="case-hero-tag">Food & Beverage</span>
-          <span class="case-hero-tag">2,700 employees</span>
+          <span class="case-hero-tag">Sydney, Australia</span>
+          <span class="case-hero-tag">Food &amp; Beverage</span>
+          <span class="case-hero-tag">2,700 Employees</span>
         </div>
       </div>
     </section>
 
-    <!-- Content -->
+    <div class="case-download">
+      <div class="case-download-inner">
+        <p>Read the full SAP Concur case study for Lion.</p>
+        <a href="assets/sap-concur_case-study_lion.pdf" class="btn-download" target="_blank">↓ Download PDF</a>
+      </div>
+    </div>
+
     <div class="case-content">
-      
-      <!-- The Challenge -->
+      <section class="case-section">
+        <div class="case-facts">
+          <div class="case-fact">
+            <p class="case-fact-label">Industry</p>
+            <p class="case-fact-value">Food &amp; Beverage</p>
+          </div>
+          <div class="case-fact">
+            <p class="case-fact-label">Headquarters</p>
+            <p class="case-fact-value">Sydney, Australia</p>
+          </div>
+          <div class="case-fact">
+            <p class="case-fact-label">Scale</p>
+            <p class="case-fact-value">1,500 AU / 1,200 NZ</p>
+          </div>
+          <div class="case-fact">
+            <p class="case-fact-label">Solutions</p>
+            <p class="case-fact-value">Concur Expense, Travel, Detect &amp; Consultative Intelligence</p>
+          </div>
+        </div>
+      </section>
+
       <section class="case-section">
         <h2>The Challenge</h2>
         <div class="case-section-line"></div>
-        <p>
-          Lion, one of Australasia's largest beverage companies, was reliant on largely manual expense management processes with no integration to its SAP ERP system. Employees had to populate blank forms with all expense details, and receipts could not be attached at the expense item level — making approval and audit difficult and time-consuming. The company's external travel management company handled all corporate travel bookings, and Lion had little or no visibility into travel and expense spend, making it difficult to encourage compliant behaviours or report accurately on spending.
-        </p>
+        <p>Lion, one of Australasia's largest beverage companies, relied on largely manual expense management processes with no integration to its SAP ERP system. Employees had to populate blank forms with all expense details, and receipts could not be attached at the expense item level — making approval and audit difficult and time-consuming. The company's external travel management company handled all corporate travel bookings, and Lion had little or no visibility into travel and expense spend, making it difficult to encourage compliant behaviours or report accurately on spending.</p>
       </section>
 
-      <!-- What We Delivered -->
       <section class="case-section">
-        <h2>What We Delivered</h2>
+        <h2>The Solution</h2>
         <div class="case-section-line"></div>
+        <p>Lion undertook a three-year phased project across both Australian and New Zealand operations:</p>
         <ul>
           <li>Implemented Concur Expense integrated with Lion's SAP ERP and SAP HR systems, enabling pre-populated fields, drop-down code selection, and automatic employee profile updates</li>
           <li>Deployed Concur Travel to give employees a direct self-service booking tool with embedded policy rules and preferred vendor controls</li>
@@ -214,43 +126,40 @@
         </ul>
       </section>
 
-      <!-- The Outcome -->
       <section class="case-section">
         <h2>The Outcome</h2>
         <div class="case-section-line"></div>
-        <p>
-          Lion reduced expense processing time by at least 50% and achieved 85%+ direct booking rates through Concur Travel. With Concur Detect, the company moved to 100% audit coverage — identifying and auditing over 600 high-risk expenses in the first four weeks alone. The integrated platform gave Lion's leadership team real-time visibility into spend and policy compliance across both Australian and New Zealand operations, transforming what was previously a week-long manual investigation process into an automated, real-time output.
-        </p>
+        <p>Lion reduced expense processing time by at least 50% and achieved 85%+ direct booking rates through Concur Travel. With Concur Detect, the company moved to 100% audit coverage — identifying and auditing over 600 high-risk expenses in the first four weeks alone. The integrated platform gave Lion's leadership team real-time visibility into spend and policy compliance across both Australian and New Zealand operations, transforming what was previously a week-long manual investigation process into an automated, real-time output.</p>
       </section>
 
+      <section class="case-section">
+        <h2>Why This Matters</h2>
+        <div class="case-section-line"></div>
+        <p>Lion's journey from random-sample auditing to 100% automated coverage illustrates the governance gap many ANZ organisations face: controls exist on paper, but enforcement is inconsistent and visibility is limited. By the time non-compliance surfaces, the damage is already done.</p>
+        <p>The Governance Risk Snapshot helps organisations identify where these enforcement gaps exist — before they need a tool like Concur Detect to catch what manual processes missed.</p>
+      </section>
     </div>
 
-    <!-- CTA Section -->
     <section class="case-cta">
       <div class="case-cta-inner">
-        <h3>Ready to strengthen your SAP Concur governance?</h3>
-        <p>Start with a Governance Risk Snapshot to identify control gaps in your environment.</p>
-        <a href="governance-risk-snapshot.html" class="btn-primary">Start with a Governance Snapshot</a>
+        <h3>Is your Concur environment audit-defensible?</h3>
+        <p>Start with a Governance Risk Snapshot to find out where your controls hold — and where they don't.</p>
+        <a href="governance-risk-snapshot.html" class="btn-primary">Request a Governance Snapshot</a>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
-      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur partner for Australian & New Zealand organisations.
+      © <span id="year"></span> Hitpoint. Melbourne-based SAP Concur governance partner for Australian & ANZ organisations.
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
     document.querySelector('.nav-toggle')?.addEventListener('click', function() {
       document.querySelector('.site-nav')?.classList.toggle('open');
     });
   </script>
 </body>
 </html>
-
-
-
